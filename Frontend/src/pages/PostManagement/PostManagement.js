@@ -3,7 +3,7 @@ import ChangePassword from "../../modals/ChangePassword/ChangePassword";
 import ChangeUsername from "../../modals/ChangeUsername/ChangeUsername";
 import "./index.css";
 
-const API_URL = `${import.meta.env.BACKEND_URL}/api/posts`;
+const API_URL = "https://headlinehubbackend.onrender.com/api/posts";
 
 const initialPost = {
   title: "",
