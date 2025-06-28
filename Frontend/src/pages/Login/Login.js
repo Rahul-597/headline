@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.BACKEND_URL}/api/auth/login`,
+        "https://headlinehubbackend.onrender.com/api/auth/login",
         { email, password }
       );
       const { token, role ,userId} = response.data;
