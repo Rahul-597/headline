@@ -34,7 +34,7 @@ const SignUp = () => {
 
     if (validateForm()) {
       try {
-        const response = await axios.post(`${import.meta.env.BACKEND_URL}/api/auth/sign-up`, {
+        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/sign-up`, {
           name: formData.name,
           email: formData.email,
           password: formData.password,
