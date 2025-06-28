@@ -36,7 +36,7 @@ const AdminDashboard = () => {
   
     const fetchNormalUsers = async () => {
       try {
-        const response = await fetch(`${import.meta.env.BACKEND_URL}/api/admin/get-users`);
+        const response = await fetch("https://headlinehubbackend.onrender.com/api/admin/get-users");
         const data = await response.json();
         setNormalUsers(data);
       } catch (error) {
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
   const assignRole = async (id) => {
     if (!selectedCategory[id]) return;
     try {
-      await fetch(`${import.meta.env.BACKEND_URL}/api/admin/assign-role`, {
+      await fetch("https://headlinehubbackend.onrender.com/api/admin/assign-role", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: id, category: selectedCategory[id] }),
@@ -74,7 +74,7 @@ const AdminDashboard = () => {
   const updateCategory = async (id) => {
     if (!selectedCategory[id]) return;
     try {
-      await fetch(`${import.meta.env.BACKEND_URL}/api/admin/update-category`, {
+      await fetch("https://headlinehubbackend.onrender.com/api/admin/update-category", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: id, category: selectedCategory[id] }),
@@ -92,7 +92,7 @@ const AdminDashboard = () => {
 
   const revertUser = async (id) => {
     try {
-      await fetch(`${import.meta.env.BACKEND_URL}/api/admin/revert-user`, {
+      await fetch("https://headlinehubbackend.onrender.com/api/admin/revert-user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: id }),
@@ -113,7 +113,7 @@ const AdminDashboard = () => {
   
   const deleteUser = async (id, isSpecial) => {
     try {
-      await fetch(`${import.meta.env.BACKEND_URL}/api/admin/remove-user/${id}`, {
+      await fetch("https://headlinehubbackend.onrender.com/api/admin/remove-user/${id}", {
         method: "DELETE",
       });
       if (isSpecial) {
