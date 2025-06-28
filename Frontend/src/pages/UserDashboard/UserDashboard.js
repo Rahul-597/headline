@@ -23,7 +23,7 @@ const UserDashboard = () => {
 
     // Fetch user details from backend
     axios
-      .get(`${import.meta.env.BACKEND_URL}/api/users/user-info/${userId}`)
+      .get("https://headlinehubbackend.onrender.com/api/users/user-info/${userId}")
       .then((response) => {
         setUsername(response.data.name);
         setEmail(response.data.email);
