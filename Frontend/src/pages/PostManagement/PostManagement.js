@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom";
 import ChangePassword from "../../modals/ChangePassword/ChangePassword";
 import ChangeUsername from "../../modals/ChangeUsername/ChangeUsername";
 import "./index.css";
@@ -27,6 +28,8 @@ export default function PostManagement() {
   const [isChangeUsernameOpen, setIsChangeUsernameOpen] = useState(false);
   const [username, setUsername] = useState("specialperson");
   const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetchPosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -137,7 +140,7 @@ export default function PostManagement() {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     localStorage.removeItem("userId");
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   const resetForm = () => {
