@@ -137,7 +137,7 @@ export default function PostManagement() {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     localStorage.removeItem("userId");
-    window.location.href = "https://headlinehubbackend.onrender.com/api/auth/login";
+    window.location.href = "/login";
   };
 
   const resetForm = () => {
