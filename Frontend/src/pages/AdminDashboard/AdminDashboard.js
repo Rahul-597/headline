@@ -26,7 +26,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchSpecialUsers = async () => {
       try {
-        const response = await fetch(`${import.meta.env.BACKEND_URL}/api/admin/get-special-users`);
+        const response = await fetch("https://headlinehubbackend.onrender.com/api/admin/get-special-users");
         const data = await response.json();
         setSpecialUsers(data); // Ensure this includes category
       } catch (error) {
