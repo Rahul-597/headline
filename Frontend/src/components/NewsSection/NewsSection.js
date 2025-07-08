@@ -3,8 +3,9 @@ import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
 import "./index.css";
 
-const BACKEND_URL = "http://localhost:5000"; // ✅ Correct backend URL
-
+// const BACKEND_URL = "http://localhost:5000";
+// ✅ Correct backend URL
+const BACKEND_URL = " https://headlinehubbackend.onrender.com";
 const NewsSection = ({ category, title }) => {
   const [articles, setArticles] = useState([]);
   const [savedArticles, setSavedArticles] = useState([]);
