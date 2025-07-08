@@ -8,7 +8,8 @@ const ChangeUsername = ({ isOpen, onClose, currentUsername, onSave }) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const BACKEND_URL = "http://localhost:5000";
+  // const BACKEND_URL = "http://localhost:5000";
+  const BACKEND_URL =  "https://headlinehubbackend.onrender.com";
 
   if (!isOpen) return null;
 
