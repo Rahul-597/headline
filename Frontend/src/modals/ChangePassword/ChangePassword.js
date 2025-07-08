@@ -10,8 +10,8 @@ const ChangePassword = ({ isOpen, onClose, currentUsername }) => {
   const [loading, setLoading] = useState(false);
   const [userToken, setUserToken] = useState("");
 
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-
+  // const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+  const BACKEND_URL ="https://headlinehubbackend.onrender.com";
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
